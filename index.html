@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container registration-step1">
+      <h2>Registration Form</h2>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" required />
+          <span class="error" id="fullNameError"></span>
+        </div>
+        <div class="form-group">
+          <label for="mobileNumber">Mobile Number:</label>
+          <input type="text" id="mobileNumber" name="mobileNumber" required />
+          <span class="error" id="mobileNumberError"></span>
+        </div>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+          <span class="error" id="usernameError"></span>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <span class="error" id="passwordError"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email ID:</label>
+          <input type="email" id="email" name="email" required />
+          <button type="button" id="sendOtpButton">Verify Email</button>
+          <span class="error" id="emailError"></span>
+        </div>
+        <button type="submit" id="submitButton" class="disable">Submit</button>
+      </form>
+    </div>
+
+    <div class="container registration-step2">
+      <h2>Email Verification</h2>
+      <p>A One-time Password has been sent to <span id="verifyEmail"></span></p>
+      <div class="otp-group">
+        <input type="number" />
+        <input type="number" />
+        <input type="number" />
+        <input type="number" />
+      </div>
+      <button id="verifyOtpButton" class="disable">Verify OTP</button>
+    </div>
+  </body>
+</html>
